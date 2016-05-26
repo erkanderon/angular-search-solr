@@ -1,0 +1,19 @@
+
+<div ng-app="SearchPage" class="center">
+    <div ng-controller="SearchCtrl" class="center2 container" >
+        <p class="bg-primary"><h1>Search</h1></p>
+        <h4><input type="search" class="form-control" placeholder="Search" ng-model="query" ng-change="change()">
+        Searching for: <b>{{query}}</b>
+        Founds: <b>{{counter}}</b></h4>
+        <span ng-model="results" ng-repeat="r in results">
+            <div id="ofl"><p>{{r.content[0]}}</p></div>
+            <p id="reldiv2">{{r.id}}</p>
+            <p id="reldiv2">{{r.cat[0]}}</p>
+            <p ng-repeat="fea in r.features">{{fea}}</p>
+            <hr class="divider">
+        </span>
+    </div>
+</div>
+
+
+

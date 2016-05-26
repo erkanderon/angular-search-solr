@@ -1,0 +1,21 @@
+<div ng-app="SearchPage2" ng-controller="SearchCtrl2" class="center">
+    <div class="center2 container" >
+        <p class="bg-primary"><h1>Search</h1></p>
+        <input type="checkbox" ng-model="hello.model" ng-true-value="'spor'" ng-change="change(hello.model)"><img src="SearchPage2/spor.png">
+        <br>
+        <input type="checkbox" ng-model="hello.model2" ng-true-value="'yasam'" ng-change="change(hello.model2)"><img src="SearchPage2/yasam.png">
+        <br>
+        <input type="checkbox" ng-model="hello.model3" ng-true-value="'turkiye'" ng-change="change(hello.model3)"><img src="SearchPage2/turkiye.png">
+        <h4><input type="search" class="form-control" placeholder="Search for text" ng-model="qu" ng-change="searchSomething(qu)">
+            Searching for: <b>{{qu}}</b>
+            Founds: <b>{{counter2}}</b></h4>
+
+        <span ng-model="results" ng-repeat="r in results">
+            <div id="ofl"><p>{{r.content[0]}}</p></div>
+            <p id="reldiv2">{{r.id}}</p>
+            <p id="reldiv2">{{r.cat[0]}}</p>
+            <p ng-repeat="fea in r.features">{{fea}}</p>
+            <hr class="divider">
+        </span>
+    </div>
+</div>
